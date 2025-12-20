@@ -8,28 +8,16 @@
 </head>
 <body>
 
-  <!-- ===== SIDEBAR NAV ===== -->
-  <aside class="sidebar">
-    <h2>Gudang App</h2>
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="barang.html">Master Barang</a></li>
-      <li><a href="stok-masuk.html">Stok Masuk</a></li>
-      <li><a href="order-upload.html">Upload Order</a></li>
-      <li><a href="proses-order.html">Proses Order</a></li>
-      <li><a href="pengiriman.html">Pengiriman</a></li>
-      <li><a href="surat-jalan.html">Surat Jalan</a></li>
-      <li><a href="laporan.html">Laporan Bulanan</a></li>
-    </ul>
-  </aside>
+  <!-- Sidebar include -->
+  <div data-include="navbar.html"></div>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- Main content -->
   <main class="main-content">
     <div class="container">
       <h1>Dashboard</h1>
       <p class="subtitle">Selamat datang di aplikasi gudang</p>
 
-      <!-- ===== CARDS ===== -->
+      <!-- Cards 3D / Neumorphism -->
       <div class="card">
         <h3>Total Barang</h3>
         <p>1,500 Items</p>
@@ -45,7 +33,7 @@
         <p>5 Shipment Pending</p>
       </div>
 
-      <!-- ===== DASHBOARD MENU ===== -->
+      <!-- Dashboard menu -->
       <ul class="menu">
         <li><a href="barang.html">Master Barang</a></li>
         <li><a href="stok-masuk.html">Stok Masuk</a></li>
@@ -56,12 +44,12 @@
         <li><a href="laporan.html">Laporan Bulanan</a></li>
       </ul>
 
-      <!-- ===== FOOTER ===== -->
       <footer>
         &copy; 2025 Gudang App. All rights reserved.
       </footer>
     </div>
   </main>
 
+  <script src="js/include.js"></script>
 </body>
-</html>
+              </html>
