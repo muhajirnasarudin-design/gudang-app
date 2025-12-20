@@ -1,15 +1,26 @@
-<div id="sidebar" style="width:200px;float:left;border-right:1px solid #000;padding:10px;">
-  <b>📦 Gudang App</b><br><br>
-  <a href="index.html">Dashboard</a><br>
-  <a href="barang.html">Master Barang</a><br>
-  <a href="stok-masuk.html">Stok Masuk</a><br>
-  <a href="order-upload.html">Upload Order</a><br>
-  <a href="proses-order.html">Proses Order</a><br>
-  <a href="pengiriman.html">Pengiriman</a><br>
-  <a href="surat-jalan.html">Surat Jalan</a><br>
-  <a href="laporan.html">Laporan</a><br><br>
-  <button id="toggleSidebar">☰ Sembunyikan / Tampilkan</button>
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sidebar-header">
+    <b>📦 Gudang App</b>
+    <button id="toggleSidebar">☰</button>
+  </div>
+  <nav class="sidebar-menu">
+    <a href="index.html">Dashboard</a>
+    <a href="barang.html">Master Barang</a>
+    <a href="stok-masuk.html">Stok Masuk</a>
+    <a href="order-upload.html">Upload Order</a>
+    <a href="proses-order.html">Proses Order</a>
+    <a href="pengiriman.html">Pengiriman</a>
+    <a href="surat-jalan.html">Surat Jalan</a>
+    <a href="laporan.html">Laporan</a>
+  </nav>
 </div>
-<div id="content" style="margin-left:210px;padding:10px;">
+
+<!-- CONTENT -->
+<div id="content">
   <!-- Konten halaman -->
 </div>
+
+<style>
+/* ===== RESET ===== */
+* { box-sizing: border-box; margin:0; padding:0; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
