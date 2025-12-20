@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Order CSV</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/load-navbar.js"></script>
+<script src="js/db.js"></script>
+<!-- JS page lainnya -->
+</head>
+<body>
+
+<h2>📥 Upload Order Marketplace (CSV)</h2>
+
+<p>Format CSV sederhana:</p>
+<pre>
+order_id,sku,qty,platform
+ORD001,BRG001,2,Shopee
+</pre>
+
+<input type="file" accept=".csv" onchange="loadCSV(this.files[0])">
+
+<hr>
+<a href="index.html">⬅️ Kembali ke Dashboard</a>
+
+<script src="js/db.js"></script>
+<script src="js/csv.js"></script>
+</body>
+</html>

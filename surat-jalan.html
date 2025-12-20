@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat Jalan</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media print {
+      button, a { display: none; }
+      body { background: #fff; }
+    }
+  </style>
+<script src="js/load-navbar.js"></script>
+<script src="js/db.js"></script>
+<!-- JS page lainnya -->
+</head>
+<body>
+
+<div class="container">
+  <h1>📄 Surat Jalan</h1>
+  <p>Order siap dicetak</p>
+
+  <div id="suratList"></div>
+
+  <button onclick="window.print()">🖨️ Cetak / Save PDF</button>
+  <br><br>
+  <a href="index.html">⬅️ Dashboard</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode"></script>
+<script src="js/db.js"></script>
+<script src="js/suratjalan.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Master Barang</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Barcode -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode"></script>
+<script src="js/load-navbar.js"></script>
+<script src="js/db.js"></script>
+<!-- JS page lainnya -->
+</head>
+<body>
+
+<div class="container">
+
+  <h1>📦 Master Barang</h1>
+  <p>Data Barang Gudang + Barcode</p>
+
+  <div class="card">
+    <input id="sku" placeholder="SKU">
+    <input id="nama" placeholder="Nama Barang">
+    <input id="stok" type="number" placeholder="Stok Awal">
+    <button onclick="simpanBarang()">Simpan Barang</button>
+  </div>
+
+  <div class="card">
+    <h3>📋 Daftar Barang</h3>
+    <div id="list"></div>
+  </div>
+
+  <a href="index.html">⬅️ Kembali ke Dashboard</a>
+
+</div>
+
+<!-- JS -->
+<script src="js/db.js"></script>
+<script src="js/barang.js"></script>
+
+</body>
+</html>

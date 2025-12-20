@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan Bulanan</title>
+
+  <link rel="stylesheet" href="css/style.css">
+<script src="js/load-navbar.js"></script>
+<script src="js/db.js"></script>
+<!-- JS page lainnya -->
+</head>
+<body>
+
+<div class="container">
+  <h1>📊 Laporan Bulanan Gudang</h1>
+
+  <label>Pilih Bulan:</label>
+  <input type="month" id="bulan">
+  <button onclick="loadLaporan()">Tampilkan</button>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Total Order</h3>
+      <h2 id="totalOrder">0</h2>
+    </div>
+
+    <div class="card">
+      <h3>Total Barang Keluar</h3>
+      <h2 id="totalQty">0</h2>
+    </div>
+
+    <div class="card">
+      <h3>Barang Terlaris</h3>
+      <p id="topBarang">-</p>
+    </div>
+  </div>
+
+  <h2>📦 Detail Order</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Order ID</th>
+        <th>Barang</th>
+        <th>Qty</th>
+        <th>Ekspedisi</th>
+      </tr>
+    </thead>
+    <tbody id="detail"></tbody>
+  </table>
+
+  <br>
+  <button onclick="window.print()">🖨️ Cetak / PDF</button>
+  <br><br>
+  <a href="index.html">⬅️ Dashboard</a>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/laporan.js"></script>
+</body>
+</html>
