@@ -2,95 +2,99 @@
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 16px;
   background: linear-gradient(135deg, #eef2f7, #dbe5f1);
   color: #333;
+  line-height: 1.6;
+  padding: 16px;
 }
 
 /* ===== CONTAINER ===== */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
+  padding: 16px;
 }
 
 /* ===== HEADER ===== */
 h1 {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 4px;
 }
 
-p {
+p.subtitle {
   text-align: center;
-  margin-top: 0;
   color: #555;
+  margin-bottom: 20px;
 }
 
-/* ===== CARD (3D EFFECT) ===== */
+/* ===== CARD (3D / Neumorphism) ===== */
 .card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    8px 8px 20px rgba(0,0,0,0.1),
+    -8px -8px 20px rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow:
-    0 14px 30px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    12px 12px 25px rgba(0,0,0,0.15),
+    -12px -12px 25px rgba(255,255,255,0.8);
 }
 
-/* ===== MENU DASHBOARD ===== */
-ul {
+/* ===== DASHBOARD MENU ===== */
+ul.menu {
   list-style: none;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
-li a {
+ul.menu li a {
   display: block;
   text-decoration: none;
-  padding: 16px;
+  padding: 20px;
   background: linear-gradient(145deg, #ffffff, #e6ecf3);
-  border-radius: 14px;
+  border-radius: 16px;
   text-align: center;
   font-weight: 600;
   color: #2c3e50;
   box-shadow:
-    6px 6px 14px rgba(0, 0, 0, 0.12),
-    -6px -6px 14px rgba(255, 255, 255, 0.9);
-  transition: all 0.2s ease;
+    6px 6px 16px rgba(0,0,0,0.12),
+    -6px -6px 16px rgba(255,255,255,0.9);
+  transition: all 0.3s ease;
 }
 
-li a:hover {
+ul.menu li a:hover {
   background: linear-gradient(145deg, #2f80ed, #1c63c7);
   color: #fff;
   transform: translateY(-3px);
 }
 
-/* ===== FORM ===== */
+/* ===== FORM ELEMENTS ===== */
 input, select, button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin: 8px 0;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
   font-size: 15px;
 }
 
 input, select {
   background: #f7f9fc;
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.12),
+              inset -3px -3px 6px rgba(255,255,255,0.7);
 }
 
 button {
@@ -98,51 +102,73 @@ button {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  box-shadow:
-    0 6px 14px rgba(47, 128, 237, 0.5);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 14px rgba(47,128,237,0.5);
+  transition: all 0.2s ease;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 10px 22px rgba(47, 128, 237, 0.7);
+  box-shadow: 0 10px 22px rgba(47,128,237,0.7);
 }
 
 /* ===== LIST ITEM ===== */
 .list-item {
   background: #fff;
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 6px 6px 14px rgba(0,0,0,0.1),
+              -6px -6px 14px rgba(255,255,255,0.7);
 }
 
 /* ===== BARCODE ===== */
-svg {
+svg.barcode {
   margin-top: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  margin-top: 24px;
   text-align: center;
-  color: #666;
+  margin-top: 30px;
   font-size: 13px;
+  color: #666;
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 12px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 1.8rem;
   }
 
-  li a {
+  ul.menu {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  ul.menu li a {
     padding: 14px;
     font-size: 14px;
+  }
+
+  input, select, button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  ul.menu {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
