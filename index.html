@@ -2,34 +2,66 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard Gudang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gudang App - Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
-<script src="js/load-navbar.js"></script>
-<script src="js/db.js"></script>
-<!-- JS page lainnya -->
 </head>
 <body>
 
-  <h1>📦 Aplikasi Gudang Marketplace</h1>
-  <p>Manajemen Stok • Order • Pengiriman</p>
+  <!-- ===== SIDEBAR NAV ===== -->
+  <aside class="sidebar">
+    <h2>Gudang App</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="barang.html">Master Barang</a></li>
+      <li><a href="stok-masuk.html">Stok Masuk</a></li>
+      <li><a href="order-upload.html">Upload Order</a></li>
+      <li><a href="proses-order.html">Proses Order</a></li>
+      <li><a href="pengiriman.html">Pengiriman</a></li>
+      <li><a href="surat-jalan.html">Surat Jalan</a></li>
+      <li><a href="laporan.html">Laporan Bulanan</a></li>
+    </ul>
+  </aside>
 
-  <hr>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content">
+    <div class="container">
+      <h1>Dashboard</h1>
+      <p class="subtitle">Selamat datang di aplikasi gudang</p>
 
-  <ul>
-    <li><a href="barang.html">📋 Master Barang + Barcode</a></li>
-    <li><a href="stok-masuk.html">➕ Stok Masuk</a></li>
-    <li><a href="order-upload.html">📥 Upload Order CSV</a></li>
-    <li><a href="proses-order.html">⚙️ Proses Order (Pick & Pack)</a></li>
-    <li><a href="pengiriman.html">🚚 Pengiriman & Resi</a></li>
-    <li><a href="surat-jalan.html">🧾 Cetak Surat Jalan</a></li>
-    <li><a href="laporan.html">📊 Laporan Bulanan</a></li>
-  </ul>
+      <!-- ===== CARDS ===== -->
+      <div class="card">
+        <h3>Total Barang</h3>
+        <p>1,500 Items</p>
+      </div>
 
-  <hr>
+      <div class="card">
+        <h3>Order Hari Ini</h3>
+        <p>23 Orders</p>
+      </div>
 
-  <footer>
-    <small>Gudang App © 2025</small>
-  </footer>
+      <div class="card">
+        <h3>Pengiriman</h3>
+        <p>5 Shipment Pending</p>
+      </div>
+
+      <!-- ===== DASHBOARD MENU ===== -->
+      <ul class="menu">
+        <li><a href="barang.html">Master Barang</a></li>
+        <li><a href="stok-masuk.html">Stok Masuk</a></li>
+        <li><a href="order-upload.html">Upload Order</a></li>
+        <li><a href="proses-order.html">Proses Order</a></li>
+        <li><a href="pengiriman.html">Pengiriman</a></li>
+        <li><a href="surat-jalan.html">Surat Jalan</a></li>
+        <li><a href="laporan.html">Laporan Bulanan</a></li>
+      </ul>
+
+      <!-- ===== FOOTER ===== -->
+      <footer>
+        &copy; 2025 Gudang App. All rights reserved.
+      </footer>
+    </div>
+  </main>
 
 </body>
 </html>
