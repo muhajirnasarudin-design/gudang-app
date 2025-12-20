@@ -330,3 +330,9 @@ body {
     display: none;
   }
 }
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center; /* agar icon + text sejajar */
+  gap: 8px;
+}
