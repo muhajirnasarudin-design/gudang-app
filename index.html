@@ -1,196 +1,190 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Zone PS | Tempat Main PS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Zone PS | Tempat Main PS</title>
 
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:radial-gradient(circle at top,#020617,#000);
-      color:#fff;
-      perspective:1200px;
-    }
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#1e3a8a,#6d28d9,#22c55e);
+  background-size:300% 300%;
+  animation:bg 10s ease infinite;
+  color:#fff;
+  perspective:1200px;
+}
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    header{
-      text-align:center;
-      padding:80px 20px;
-      transform-style:preserve-3d;
-    }
+header{
+  text-align:center;
+  padding:90px 20px;
+}
 
-    h1{
-      font-size:3rem;
-      color:#38bdf8;
-      margin-bottom:10px;
-      text-shadow:0 10px 30px rgba(56,189,248,.5);
-      transform:translateZ(40px);
-    }
+h1{
+  font-size:3rem;
+  margin-bottom:10px;
+  text-shadow:0 10px 30px rgba(0,0,0,.5);
+}
 
-    p{
-      color:#cbd5f5;
-      transform:translateZ(20px);
-    }
+p{
+  color:#e5e7eb;
+}
 
-    /* === TOMBOL 3D === */
-    .btn-wa{
-      display:inline-block;
-      margin-top:35px;
-      padding:16px 42px;
-      background:linear-gradient(145deg,#22c55e,#16a34a);
-      color:#020617;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:60px;
-      box-shadow:
-        0 15px 30px rgba(34,197,94,.5),
-        inset 0 -4px 10px rgba(0,0,0,.3);
-      transform:translateZ(50px);
-      transition:.3s;
-    }
-    .btn-wa:hover{
-      transform:translateZ(70px) scale(1.05);
-      box-shadow:0 25px 50px rgba(34,197,94,.8);
-    }
+/* BUTTON 3D */
+.btn-wa{
+  display:inline-block;
+  margin-top:35px;
+  padding:16px 44px;
+  background:linear-gradient(145deg,#22c55e,#4ade80);
+  color:#022c22;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:60px;
+  box-shadow:0 18px 35px rgba(34,197,94,.6);
+  transition:.3s;
+}
+.btn-wa:hover{
+  transform:scale(1.08);
+  box-shadow:0 28px 60px rgba(34,197,94,.9);
+}
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:70px 20px;
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
 
-    h2{
-      text-align:center;
-      color:#38bdf8;
-      margin-bottom:45px;
-      font-size:2.2rem;
-      text-shadow:0 10px 25px rgba(56,189,248,.4);
-    }
+h2{
+  text-align:center;
+  margin-bottom:45px;
+  font-size:2.2rem;
+  color:#bfdbfe;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
 
-    /* === CARD 3D === */
-    .card{
-      background:linear-gradient(145deg,#020617,#020617);
-      border-radius:22px;
-      padding:35px;
-      text-align:center;
-      box-shadow:
-        0 20px 40px rgba(0,0,0,.7),
-        inset 0 0 20px rgba(255,255,255,.03);
-      transform-style:preserve-3d;
-      transition:.3s;
-    }
-    .card:hover{
-      transform:translateY(-10px) rotateX(4deg) rotateY(-4deg);
-      box-shadow:0 35px 70px rgba(0,0,0,.9);
-    }
+/* CARD FRIENDLY */
+.card{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  border-radius:24px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,.3);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
 
-    .price{
-      font-size:2rem;
-      color:#22c55e;
-      font-weight:bold;
-      text-shadow:0 5px 20px rgba(34,197,94,.6);
-    }
+.price{
+  font-size:2rem;
+  font-weight:bold;
+  color:#bbf7d0;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      color:#94a3b8;
-      font-size:.9rem;
-    }
+footer{
+  text-align:center;
+  padding:30px;
+  color:#e5e7eb;
+  font-size:.9rem;
+}
 
-    /* === WA FLOAT 3D === */
-    .wa-float{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:linear-gradient(145deg,#22c55e,#16a34a);
-      color:#020617;
-      padding:16px 22px;
-      border-radius:60px;
-      font-weight:bold;
-      text-decoration:none;
-      box-shadow:0 20px 40px rgba(34,197,94,.7);
-      transition:.3s;
-    }
-    .wa-float:hover{
-      transform:scale(1.1);
-      box-shadow:0 30px 60px rgba(34,197,94,1);
-    }
-  </style>
+/* FLOAT WA */
+.wa-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#22c55e;
+  color:#022c22;
+  padding:16px 24px;
+  border-radius:60px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 20px 40px rgba(34,197,94,.7);
+  transition:.3s;
+}
+.wa-float:hover{
+  transform:scale(1.1);
+}
+</style>
 </head>
 <body>
 
 <header>
   <h1>🎮 GAME ZONE PS</h1>
-  <p>Tempat main PlayStation nyaman, bersih, dan seru. Cocok buat mabar & turnamen.</p>
+  <p>Tempat main PlayStation nyaman, bersih, dan seru untuk semua usia.</p>
 
   <a class="btn-wa"
      href="https://wa.me/6282320956424?text=Halo%20admin%20Game%20Zone%20PS,%20saya%20mau%20booking"
-     target="_blank" rel="noopener">
+     target="_blank">
      🔥 Booking Sekarang
   </a>
 </header>
 
 <section>
-  <h2>Kenapa Pilih Kami?</h2>
-  <div class="grid">
-    <div class="card">✔ Ruangan AC & Bersih</div>
-    <div class="card">✔ TV Besar Full HD / 4K</div>
-    <div class="card">✔ Stick Original & Terawat</div>
-    <div class="card">✔ Harga Bersahabat</div>
-    <div class="card">✔ Cocok Mabar & Turnamen</div>
-    <div class="card">✔ WiFi & Snack</div>
-  </div>
+<h2>Kenapa Pilih Kami?</h2>
+<div class="grid">
+  <div class="card">✔ Ruangan AC & Bersih</div>
+  <div class="card">✔ TV Besar & Nyaman di Mata</div>
+  <div class="card">✔ Stick Original & Aman</div>
+  <div class="card">✔ Harga Terjangkau</div>
+  <div class="card">✔ Cocok Anak & Dewasa</div>
+  <div class="card">✔ WiFi & Snack</div>
+</div>
 </section>
 
 <section>
-  <h2>Harga Main</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>PS4 Reguler</h3>
-      <div class="price">Rp 7.000 / jam</div>
-    </div>
-    <div class="card">
-      <h3>PS4 VIP</h3>
-      <div class="price">Rp 10.000 / jam</div>
-    </div>
-    <div class="card">
-      <h3>PS5</h3>
-      <div class="price">Rp 15.000 / jam</div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Kontak</h2>
+<h2>Harga Main</h2>
+<div class="grid">
   <div class="card">
-    <p>📍 Jl. Contoh Raya No. 12</p>
-    <p>📞 WhatsApp: +62 823-2095-6424</p>
-
-    <a class="btn-wa"
-       href="https://wa.me/6282320956424?text=Halo%20admin%20Game%20Zone%20PS,%20saya%20mau%20booking"
-       target="_blank" rel="noopener">
-       🎯 Pesan via WhatsApp
-    </a>
+    <h3>PS4 Reguler</h3>
+    <div class="price">Rp 7.000 / jam</div>
   </div>
+  <div class="card">
+    <h3>PS4 VIP</h3>
+    <div class="price">Rp 10.000 / jam</div>
+  </div>
+  <div class="card">
+    <h3>PS5</h3>
+    <div class="price">Rp 15.000 / jam</div>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Kontak</h2>
+<div class="card">
+  <p>📍 Jl. Contoh Raya No. 12</p>
+  <p>📞 WhatsApp: +62 823-2095-6424</p>
+
+  <a class="btn-wa"
+     href="https://wa.me/6282320956424?text=Halo%20admin%20Game%20Zone%20PS,%20saya%20mau%20booking"
+     target="_blank">
+     🎯 Pesan via WhatsApp
+  </a>
+</div>
 </section>
 
 <footer>
-  © 2026 Game Zone PS — Tempat Main PS Pilihan Gamer
+© 2026 Game Zone PS — Ramah Anak, Remaja & Keluarga
 </footer>
 
 <a class="wa-float"
    href="https://wa.me/6282320956424?text=Halo%20admin%20Game%20Zone%20PS,%20saya%20mau%20booking"
-   target="_blank" rel="noopener">
-   💬 WA
+   target="_blank">
+💬 WA
 </a>
 
 </body>
